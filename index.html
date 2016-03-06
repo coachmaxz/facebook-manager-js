@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>  
+        <title>Facebook Manager with JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="vendor/jquery/2.2.1/jquery.min.js"></script>
+        <script src="assets/script/facebook-manager.js" charset="UTF-8"></script>
+        <style>
+            .container {
+                width: 1280px;
+                margin: 55px auto;
+            }
+            h3 ,p { margin: 0; padding: 0; }
+            #btn-login, #message, #profile {
+                padding: 5px 0 0 0;
+            }
+            #btn-login { 
+                display: none;
+            }
+            #btn-login img { 
+                cursor: pointer; 
+                width: 180px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Facebook OAuth Javascript Demo</h2><hr />
+            <div id="fb-root"></div>
+            <div id="btn-login">
+                <img src="img/facebook-login.png" onClick="Facebook.login();" alt="" />
+            </div>
+            <div id="message"></div>
+            <div id="profile"></div>
+        </div>
+        <script>
+            Facebook.init('app-id','v2.5');
+        </script>
+    </body>
+</html>
