@@ -11,23 +11,26 @@
                 width: 1280px;
                 margin: 55px auto;
             }
-            h3 ,p { margin: 0; padding: 0; }
+            h3, p { margin: 0; padding: 0; }
             #btn-login, #message, #profile {
                 padding: 5px 0 0 0;
-            }
-            #btn-login { 
-                display: none;
             }
             #btn-login img { 
                 cursor: pointer; 
                 width: 180px;
             }
+            #loading {
+                display: none; z-index: 10000; width: 100%; height: auto;min-height: 100%; text-align:center;  
+                padding-top: 150px; position: fixed; margin: 0 auto;background-color: #FFF; opacity: 0.5;
+            } 
         </style>
     </head>
     <body>
+        <div id="loading">
+            <img class="loading-img" src="img/loader.gif" alt="" >
+        </div>
         <div class="container">
-            <h2>Facebook OAuth Javascript Demo</h2><hr />
-            <div id="fb-root"></div>
+            <h2>Facebook OAuth Javascript</h2><hr />
             <div id="btn-login">
                 <img src="img/facebook-login.png" onClick="Facebook.login();" alt="" />
             </div>
